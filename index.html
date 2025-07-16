@@ -1,0 +1,40 @@
+// Load data dari scripts.json
+fetch("scripts.json")
+  .then((res) => res.json())
+  .then((data) => {
+    window.allScripts = data;
+    renderScripts(data);
+  });
+
+const container = document.getElementById("scriptContainer");
+const searchBar = document.getElementById("searchBar");
+
+function renderScripts(scripts) {
+  container.innerHTML = "";
+  scripts.forEach((script) => {
+    const div = document.createElement("div");
+    div.className = "script-card";
+    div.innerHTML = `
+      <h2>${script.title}</h2>
+      <p><strong>Game:</strong> ${script.game}</p>
+      <p>${script.description}</p>
+      <p><strong>Views:</strong> ${script.views.toLocaleString()}</p>
+      <button onclick="copyScript('${script.loadstring}')">📋 Copy Loadstring</button>
+    `;
+    container.appendChild(div);
+  });
+}
+
+searchBar.addEventListener("input", () => {
+  const keyword = searchBar.value.toLowerCase();
+  const filtered = allScripts.filter((s) =>
+    s.title.toLowerCase().includes(keyword) ||
+    s.game.toLowerCase().includes(keyword)
+  );
+  renderScripts(filtered);
+});
+
+function copyScript(text) {
+  navigator.clipboard.writeText(`loadstring(game:HttpGet("${text}"))()`);
+  alert("✅ Loadstring copied!");
+}
