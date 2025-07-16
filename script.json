@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Tidal ServerSide",
+    "description": "Script ServerSide powerful mirip showcase YouTube, hanya untuk game backdoored.",
+    "game": "Tower Troll Red",
+    "views": 925000,
+    "loadstring": "https://raw.githubusercontent.com/KenzoSSto1/UniverScript/main/TidalSS.lua"
+  },
+  {
+    "title": "ExSerSS Real Version",
+    "description": "Script ServerSide asli yang hanya bekerja di game yang dibackdoor, full power dan universal.",
+    "game": "Test Place",
+    "views": 782000,
+    "loadstring": "https://raw.githubusercontent.com/KenzoSSto1/UniverScript/main/ExSerSS.lua"
+  }
+]
