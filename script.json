@@ -12,5 +12,12 @@
     "game": "Test Place",
     "views": 782000,
     "loadstring": "https://raw.githubusercontent.com/KenzoSSto1/UniverScript/main/ExSerSS.lua"
+  },
+  {
+    "title": "FE RemoteEvent Tutorial",
+    "description": "Contoh script komunikasi aman antara Server dan Client menggunakan RemoteEvent. Cocok untuk pemula.",
+    "game": "Semua Game",
+    "views": 352000,
+    "loadstring": "https://raw.githubusercontent.com/KenzoSSto1/UniverScript/main/FERemoteTutorial.lua"
   }
 ]
